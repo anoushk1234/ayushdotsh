@@ -94,3 +94,13 @@
 		hr {
 			margin-top: 20px
 		}
+
+
+
+.x:hover span {
+  display: none
+}
+
+.x:hover:before {
+  content: "ayushp.eth"
+}

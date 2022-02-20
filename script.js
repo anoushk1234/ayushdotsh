@@ -1,7 +1,7 @@
 const playarea = document.getElementById("page")
 
 
-document.onload = page("ayush")
+document.onload = load()
 
 
 function page(pagename) {
@@ -23,4 +23,8 @@ function page(pagename) {
 
 function url(url) {
     window.open(url, '_blank').focus();
+}
+
+function load(){
+	page("ayush")
 }
