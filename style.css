@@ -1,8 +1,8 @@
       html,
       :root {
-        --light: #0C0C0C;
+        --midnight: #0C0C0C;
         --slate: #7C7C7C;
-        --midnight: #ffffff;
+        --light: #ffffff;
 
         box-sizing: border-box;
         margin: 0;
@@ -30,6 +30,7 @@
         margin: 3rem;
         animation: glide 600ms cubic-bezier(0.37, 0, 0.63, 1) 100ms 1 forwards;
         opacity: 0;
+				max-width: 450px;
       }
 			
 
@@ -41,52 +42,42 @@
       }
 		h2 {
 	      color: var(--midnight);
-        font-weight: inherit;
+        font-weight: 1.1rem;
         font-size:inherit;
 			}
 
-      a {
+      x {
         color: var(--slate);
         text-decoration: none;
+      }
+
+
+     a {
+        color: var(--slate);
       }
 
       a:hover {
         color: var(--midnight);
       }
 
-      @media (prefers-color-scheme: dark) {
-        body {
-          background: var(--midnight);
-        }
-
-        h1 {
-          color: var(--light);
-        }
-
-        a:hover {
-          color: var(--light);
-        }
+      x:hover {
+        color: var(--midnight);
       }
 
-      ul {
+      .nav {
         list-style: none;
       }
 
-      li {
+			.li {
         display:inline;
       }
 
-      li:not(:last-child)::after {
+      .li:not(:last-child)::after {
         content: " ·"
       }
 
       address {
         font-style: normal;
-      }
-
-      ::selection {
-        background: var(--slate);
-        color: var(--light);
       }
 
       @keyframes glide {
@@ -99,3 +90,7 @@
          opacity: 1;
        }
       }
+
+		hr {
+			margin-top: 20px
+		}
