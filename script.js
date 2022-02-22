@@ -2,9 +2,10 @@ const playarea = document.getElementById("page")
 
 
 document.onload = load()
-
+ 
 
 function page(pagename) {
+
     playarea.innerHTML = "loading..."
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
@@ -26,5 +27,6 @@ function url(url) {
 }
 
 function load(){
+
 	page("ayush")
 }

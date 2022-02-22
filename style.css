@@ -49,11 +49,13 @@
       x {
         color: var(--slate);
         text-decoration: none;
+				cursor: ne-resize
       }
 
 
      a {
         color: var(--slate);
+			 cursor: ne-resize
       }
 
       a:hover {
@@ -101,6 +103,9 @@
   display: none
 }
 
+.x {
+	cursor: nw-resize
+}
 .x:hover:before {
   content: "ayushp.eth"
 }
