@@ -5,7 +5,11 @@ document.onload = load()
  
 
 function page(pagename) {
-
+	console.log(currentPage, "-->", pagename)
+	if(currentPage == pagename){
+			return
+		}
+		currentPage = pagename
     playarea.innerHTML = "loading..."
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
@@ -27,6 +31,6 @@ function url(url) {
 }
 
 function load(){
-
+	currentPage = "home"
 	page("ayush")
 }

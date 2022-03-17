@@ -5,8 +5,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link href="./style.css" rel="preload">
-		  <link href="script.js" rel="preload" as="script">
-		  <link rel="stylesheet" href="style.css">
+		  <link rel="stylesheet" href="../style.css">
 			<meta name="referrer" content="no-referrer" />
 			<meta property="og:url" content="https://ayush.sh" />
 			<meta property="og:title" content="ayush" />
@@ -17,9 +16,10 @@
 			<meta name="twitter:title" content="ayush">
 			<meta name="twitter:description" content=":)" />
 			<meta name="twitter:image" content="https://ayush.sh/" />
+		 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
    </head>
    <body>
-      <h1 onclick="page('ayush')" class="x"><span>Ayush Pathak</span></h1>
+      <a href="https://ayush.sh"><h1 class="x"><span>@ayshptk</span></h1></a>
       <div id="page"></div>
       <br><br>emails at hey at ayush dot sh, jpegs ayushp dot eth
       <ul class="nav">
@@ -38,6 +38,7 @@
       </ul>
 		 <script>
 			 let currentPage;
+			 let index;
 		 </script>
       <script src="./engine.js">
          <p>please enable js to view this site :)</p>
