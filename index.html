@@ -1,43 +1,48 @@
 <!-- style taken from https://achariam.com/  -->
 <!doctype html>
 <html lang="en">
-   <head>
-      <title>...</title>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link href="./style.css" rel="preload">
-		  <link href="script.js" rel="preload" as="script">
-		  <link rel="stylesheet" href="style.css">
-			<meta name="referrer" content="no-referrer" />
-			<meta property="og:url" content="https://ayush.sh" />
-			<meta property="og:title" content="ayush" />
-			<meta property="og:description" content=":)" />
-			<meta property="og:image" content="https://ayush.sh/" />
-			<meta name="twitter:card" content="summary_large_image">
-			<meta name="twitter:creator" content="@ayshptk">
-			<meta name="twitter:title" content="ayush">
-			<meta name="twitter:description" content=":)" />
-			<meta name="twitter:image" content="https://ayush.sh/" />
-   </head>
-   <body>
-      <h1 onclick="page('ayush')" class="x"><span>Ayush Pathak</span></h1>
-      <div id="page"></div>
-      <br><br>emails at hey at ayush dot sh, jpegs ayushp dot eth
-      <ul class="nav">
-         <li class="li">
-            <x class="external" onclick="url('https://raid.farm')">wizardry</x>
-         </li>
-         <li class="li">
-            <x class="external" onclick="url('https://twitter.com/ayshptk')">thoughts</x>
-         </li>
-         <li class="li">
-            <x class="internal" onclick="page('about')">about</x>
-         </li>
-      </ul>
-		 <script>
-			 let currentPage;
-		 </script>
-      <script src="./engine.js">
-         <p>please enable js to view this site :)</p>
-      </script>
+
+<head>
+	<title>...</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="./style.css" rel="preload">
+	<link rel="stylesheet" href="style.css">
+	<meta name="referrer" content="no-referrer" />
+	<meta property="og:url" content="https://ayush.sh" />
+	<meta property="og:title" content="ayush" />
+	<meta property="og:description" content=":)" />
+	<meta property="og:image" content="https://ayush.sh/" />
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:creator" content="@ayshptk">
+	<meta name="twitter:title" content="ayush">
+	<meta name="twitter:description" content=":)" />
+	<meta name="twitter:image" content="https://ayush.sh/" />
+</head>
+
+<body>
+	<h1 onclick="page('ayush')" class="x"><span>Ayush Pathak</span></h1>
+	<div id="page"></div>
+	<br><br>emails at hey at ayush dot sh, jpegs ayushp dot eth
+	<ul class="nav">
+		<li class="li">
+			<x class="external" onclick="url('https://raid.farm')">wizardry</x>
+		</li>
+		<li class="li">
+			<x class="external" onclick="url('https://twitter.com/ayshptk')">thoughts</x>
+		</li>
+		<li class="li">
+			<x class="internal" onclick="page('about')">about</x>
+		</li>
+		<li class="li">
+            <x class="internal" onclick="page('cool shit')">cool shit</x>
+    </li>
+	</ul>
+	<script>
+		let currentPage;
+	</script>
+	<script src="./engine.js">
+		<p>please enable js to view this site :)</p>
+	</script>
+
 </html>
