@@ -1,36 +1,32 @@
-const playarea = document.getElementById("page")
+const playarea = document.getElementById("page");
 
-
-document.onload = load()
- 
+document.onload = load();
 
 function page(pagename) {
-	console.log(currentPage, "-->", pagename)
-	if(currentPage == pagename){
-			return
-		}
-		currentPage = pagename
-    playarea.innerHTML = "loading..."
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            playarea.innerHTML =
-                this.responseText;
-							document.title = pagename
-
-        } else if (this.readyState == 4 && this.status == 404) {
-            page(undefined)
-        }
-    };
-    xhttp.open("GET", "components/" + pagename + ".html", true);
-    xhttp.send();
+  console.log(currentPage, "-->", pagename);
+  if (currentPage == pagename) {
+    return;
+  }
+  currentPage = pagename;
+  playarea.innerHTML = "loading...";
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      playarea.innerHTML = this.responseText;
+      document.title = pagename;
+    } else if (this.readyState == 4 && this.status == 404) {
+      page(undefined);
+    }
+  };
+  xhttp.open("GET", "components/" + pagename + ".html", true);
+  xhttp.send();
 }
 
 function url(url) {
-    window.open(url, '_blank').focus();
+  window.open(url, "_blank").focus();
 }
 
-function load(){
-	currentPage = "home"
-	page("ayush")
+function load() {
+  currentPage = "home";
+  page("ayush");
 }
