@@ -2,7 +2,7 @@ const playarea = document.getElementById("page");
 
 document.onload = load();
 
-function page(pagename) {
+function page(pagename, isMarkdown) {
   console.log(currentPage, "-->", pagename);
   if (currentPage == pagename) {
     return;
@@ -12,13 +12,16 @@ function page(pagename) {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
-      playarea.innerHTML = this.responseText;
+      playarea.innerHTML = marked.parse(this.responseText);
       document.title = pagename;
     } else if (this.readyState == 4 && this.status == 404) {
       page(undefined);
     }
   };
-  xhttp.open("GET", "components/" + pagename + ".html", true);
+  const ext = isMarkdown ? ".md" : ".html";
+  console.log(pagename, ext);
+
+  xhttp.open("GET", "components/" + pagename + ext, true);
   xhttp.send();
 }
 
@@ -28,5 +31,5 @@ function url(url) {
 
 function load() {
   currentPage = "home";
-  page("ayush");
+  page("ayush", false);
 }
