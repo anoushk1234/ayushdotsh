@@ -31,5 +31,5 @@ function url(url) {
 
 function load() {
   currentPage = "home";
-  page("ayush", false);
+  page("anoushk", false);
 }
